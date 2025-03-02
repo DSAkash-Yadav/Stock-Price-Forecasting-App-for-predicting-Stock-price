@@ -1,0 +1,1 @@
+This Project can forecast Price of the Stocks which is avalaible on yahoofinace because i used LSTM RNN to build my model that's it can learn every complex pattern from the data.
