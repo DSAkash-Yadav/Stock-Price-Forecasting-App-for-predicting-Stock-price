@@ -1,0 +1,7 @@
+# Ignore virtual environment
+STCVenB/
+STCVenB/*
+
+# Ignore compiled binaries
+*.dll
+*.pyd
