@@ -13,7 +13,7 @@ st.set_page_config(page_title="Stock Market Predictor", page_icon=":chart_with_u
 st.title('📈 Stock Market Predictor')
 
 # Sidebar for user inputs
-st.sidebar.header('User Inputs')
+st.sidebar.header('Enter the Yahoo Finance symbol of the company whose data you want to analyze. By default, it is Google')
 stock = st.sidebar.text_input('Enter Stock Symbol', 'GOOG')
 start = st.sidebar.date_input('Start Date', pd.to_datetime('2012-01-01'))
 end = st.sidebar.date_input('End Date', pd.to_datetime('2022-12-31'))
