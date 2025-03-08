@@ -10,7 +10,7 @@ from sklearn.preprocessing import MinMaxScaler
 # Load the pre-trained model
 model = load_model('C:/Stock market prediction/Stock Predictions Model.keras')
 st.set_page_config(page_title="Stock Market Predictor", page_icon=":chart_with_upwards_trend:", layout="wide")
-st.title('📈 Stock Market Predictor')
+st.title('📈 Stock Price Forecasting App for Predicting the Stock Price')
 
 # Sidebar for user inputs
 st.sidebar.header('Enter the Yahoo Finance symbol of the company whose data you want to analyze. By default, it is Google')
