@@ -96,11 +96,16 @@ for i in range(100, data_test_scale.shape[0]):
 x, y = np.array(x), np.array(y)
 
 # Predicting the stock prices
-predict = model.predict(x)
+if model is not None:
+ predict = model.predict(x)
 
 # Inversing the scaling
-scale = 1 / scaler.scale_
-predict = predict * scale
+ scale = 1 / scaler.scale_
+ predict = predict * scale
+
+else:
+    st.write("Model was not loaded, prediction skipped")
+
 y = y * scale
 
 # Plotting the original vs predicted prices using Plotly
@@ -135,3 +140,28 @@ fig4.update_layout(
 
 st.plotly_chart(fig4)
 
+import streamlit as st
+import numpy as np
+from tensorflow.keras.models import load_model
+
+# ... your other code ...
+
+try:
+    model = load_model('models/Stock Predictions Model.keras')
+    print("Model Loaded Successfully")
+except Exception as e:
+    print(f"Error loading model: {e}")
+    model = None
+
+# ... your data preparation code ...
+
+if model is not None:
+    predict = model.predict(x)
+    # Inversing the scaling
+    scale = 1 / scaler.scale_
+    predict = predict * scale
+    # ... your prediction display code ...
+else:
+    st.write("Model was not loaded, prediction skipped")
+
+# ... rest of your code ...
