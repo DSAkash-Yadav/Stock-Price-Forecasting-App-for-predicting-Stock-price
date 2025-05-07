@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 API_KEY = " RDDU0R45ABGUU5ZX"
 
 # Load the pre-trained model
-model_path = 'C:/Stock market prediction/Stock Predictions Model.keras'
+model_path = 'models/Stock Predictions Model.keras'
 model = load_model(model_path)
 
 # Streamlit setup
